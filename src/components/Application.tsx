@@ -9,7 +9,8 @@ export default function Application() {
     phone: '',
     email: '',
     businessName: '',
-    linkedinUrl: '',
+    industry: '',
+    referralSource: '',
     reason: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -21,16 +22,20 @@ export default function Application() {
     setMessage('');
 
     try {
-      const { error } = await supabase.from('applications').insert([
-        {
-          full_name: `${formData.firstName} ${formData.lastName}`,
-          email: formData.email,
-          phone: formData.phone,
-          business_name: formData.businessName,
-          reason: formData.reason,
-          linkedin_url: formData.linkedinUrl,
-        },
-      ]);
+      const applicationData: Record<string, string> = {
+        full_name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        business_name: formData.businessName,
+        industry: formData.industry,
+        reason: formData.reason,
+      };
+
+      if (formData.referralSource) {
+        applicationData.referral_source = formData.referralSource;
+      }
+
+      const { error } = await supabase.from('applications').insert([applicationData]);
 
       if (error) throw error;
 
@@ -42,7 +47,8 @@ export default function Application() {
         phone: '',
         email: '',
         businessName: '',
-        linkedinUrl: '',
+        industry: '',
+        referralSource: '',
         reason: '',
       });
       setCurrentStep(1);
@@ -68,9 +74,9 @@ export default function Application() {
     }
   };
 
-  const isStep1Valid = formData.firstName.trim() && formData.lastName.trim();
-  const isStep2Valid = formData.phone.trim() && formData.email.trim();
-  const isStep3Valid = formData.businessName.trim() && formData.reason.trim();
+  const isStep1Valid = formData.firstName.trim() && formData.lastName.trim() && formData.email.trim() && formData.phone.trim();
+  const isStep2Valid = formData.businessName.trim() && formData.industry && formData.referralSource;
+  const isStep3Valid = formData.reason.trim();
   const wordCount = formData.reason.split(/\s+/).filter(word => word.length > 0).length;
 
   const handleChange = (
@@ -138,20 +144,6 @@ export default function Application() {
                 required
                 className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
               />
-            </div>
-          )}
-
-          {currentStep === 2 && (
-            <div className="space-y-4">
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Phone Number"
-                required
-                className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
-              />
               <input
                 type="email"
                 name="email"
@@ -161,10 +153,19 @@ export default function Application() {
                 required
                 className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
               />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                required
+                className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
+              />
             </div>
           )}
 
-          {currentStep === 3 && (
+          {currentStep === 2 && (
             <div className="space-y-4">
               <input
                 type="text"
@@ -175,14 +176,62 @@ export default function Application() {
                 required
                 className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
               />
-              <input
-                type="url"
-                name="linkedinUrl"
-                value={formData.linkedinUrl}
+              <select
+                name="industry"
+                value={formData.industry}
                 onChange={handleChange}
-                placeholder="https://linkedin.com/in/yourprofile"
-                className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
-              />
+                required
+                className="w-full bg-gray-100 text-gray-900 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all appearance-none cursor-pointer"
+                style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: 'right 1.5rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em' }}
+              >
+                <option value="">Select Industry</option>
+                <option value="Technology">Technology</option>
+                <option value="Finance & Banking">Finance & Banking</option>
+                <option value="Real Estate & Property">Real Estate & Property</option>
+                <option value="Healthcare & Medical">Healthcare & Medical</option>
+                <option value="Legal Services">Legal Services</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Investment & Private Equity">Investment & Private Equity</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Retail & E-commerce">Retail & E-commerce</option>
+                <option value="Media & Entertainment">Media & Entertainment</option>
+                <option value="Hospitality & Tourism">Hospitality & Tourism</option>
+                <option value="Construction & Engineering">Construction & Engineering</option>
+                <option value="Education & Training">Education & Training</option>
+                <option value="Energy & Resources">Energy & Resources</option>
+                <option value="Transportation & Logistics">Transportation & Logistics</option>
+                <option value="Pharmaceuticals & Biotechnology">Pharmaceuticals & Biotechnology</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Telecommunications">Telecommunications</option>
+                <option value="Agriculture & Food">Agriculture & Food</option>
+                <option value="Other">Other</option>
+              </select>
+              <select
+                name="referralSource"
+                value={formData.referralSource}
+                onChange={handleChange}
+                required
+                className="w-full bg-gray-100 text-gray-900 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all appearance-none cursor-pointer"
+                style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: 'right 1.5rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em' }}
+              >
+                <option value="">How Did You Hear About Us?</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral">Referral</option>
+                <option value="Word of Mouth">Word of Mouth</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Industry Event">Industry Event</option>
+                <option value="Business Associate">Business Associate</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Press/Media">Press/Media</option>
+                <option value="Existing Member">Existing Member</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          )}
+
+          {currentStep === 3 && (
+            <div className="space-y-4">
               <div>
                 <div className="flex justify-between items-center mb-2">
                   <label className="text-sm text-gray-400">Tell us about yourself</label>
@@ -196,8 +245,7 @@ export default function Application() {
                   onChange={handleChange}
                   placeholder="Why do you want to join 33?"
                   required
-                  rows={6}
-                  maxLength={1500}
+                  rows={12}
                   className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-3xl px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all resize-none"
                 />
               </div>
