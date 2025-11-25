@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
+import Application from './components/Application';
 // import Privileges from './components/Privileges';
 // import Philosophy from './components/Philosophy';
 import Footer from './components/Footer';
@@ -25,6 +26,7 @@ function App() {
       <About />
       {/* <Privileges /> */}
       {/* <Philosophy /> */}
+      <Application />
       <Footer />
     </div>
   );

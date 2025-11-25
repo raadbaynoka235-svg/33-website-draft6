@@ -5,9 +5,6 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-gray-500 mb-4">
-                The Experience
-              </p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-300 mb-8 leading-tight">
                 Designed for the select few who demand more than access
               </h2>
