@@ -22,7 +22,7 @@ function App() {
     <div className="bg-black text-white">
       <Navigation scrolled={scrolled} />
       <Hero />
-      <About />
+      {/* <About /> */}
       {/* <Privileges /> */}
       {/* <Philosophy /> */}
       <Application />
