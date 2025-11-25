@@ -164,7 +164,7 @@ export default function Application() {
                 name="businessName"
                 value={formData.businessName}
                 onChange={handleChange}
-                placeholder="Business Name"
+                placeholder="Pty Ltd Company Name"
                 required
                 className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
               />
