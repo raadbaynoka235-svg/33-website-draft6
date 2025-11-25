@@ -288,10 +288,6 @@ export default function Application() {
             </button>
           </div>
 
-          <p className="text-xs text-gray-500 text-center mt-6">
-            All applications are reviewed by our membership committee.
-            <br />
-            You will receive a response within 7-10 business days.
           </p>
         </form>
       </div>
