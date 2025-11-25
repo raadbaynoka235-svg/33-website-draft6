@@ -90,7 +90,6 @@ export default function Application() {
 
   return (
     <section id="application" className="bg-black py-24 px-6">
-      <div className="max-w-2xl mx-auto">
         </div>
 
         <div className="mb-12">
