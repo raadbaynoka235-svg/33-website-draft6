@@ -89,8 +89,6 @@ export default function Application() {
   };
 
   return (
-    <section id="application" className="bg-black py-24 px-6">
-        </div>
 
         <div className="mb-12">
           <div className="flex items-center justify-center gap-8 mb-12">
