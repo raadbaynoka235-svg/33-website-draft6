@@ -13,8 +13,6 @@ export default function Footer() {
         <div>
           <h4 className="text-xs tracking-[0.3em] uppercase text-gray-500 mb-4">Contact</h4>
           <p className="text-sm">33@lmsthinking.com</p>
-          <p className="text-sm">TK: 0452199479</p>
-          <p className="text-sm">JJ: </p>
         </div>
     
       </div>
