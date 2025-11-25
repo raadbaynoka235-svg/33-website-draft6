@@ -7,8 +7,6 @@ export default function Footer() {
         <div>
           <img src="/Final Logo.png" alt="33 Logo" className="w-16 mb-4" />
     
-          <p className="text-sm">Private Members Club Sydney</p>
-          <p className="text-sm">Exclusivity Refined. Opportunity Redefined.</p>
         </div>
     
         {/* RIGHT SECTION */}
