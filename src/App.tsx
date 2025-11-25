@@ -25,7 +25,6 @@ function App() {
       <About />
       {/* <Privileges /> */}
       {/* <Philosophy /> */}
-      <Application />
       <Footer />
     </div>
   );
