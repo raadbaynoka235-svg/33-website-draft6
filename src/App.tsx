@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 // import Privileges from './components/Privileges';
 // import Philosophy from './components/Philosophy';
-import Application from './components/Application';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 
