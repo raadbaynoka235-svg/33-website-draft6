@@ -18,11 +18,6 @@ export default function Footer() {
       </div>
     
       {/* COPYRIGHT SECTION */}
-      <div className="border-t border-gray-900 mt-12 pt-6">
-        <p className="text-xs text-center tracking-wider text-gray-600">
-          © {new Date().getFullYear()} 33. All rights reserved.
-        </p>
-      </div>
     </footer>
   );
 }
