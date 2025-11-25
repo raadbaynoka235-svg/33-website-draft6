@@ -288,7 +288,7 @@ export default function Application() {
             </button>
           </div>
 
-          </p>
+  
         </form>
       </div>
     </section>
