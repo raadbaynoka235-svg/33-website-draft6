@@ -182,7 +182,6 @@ export default function Application() {
                 <option value="Real Estate & Property">CFO (Finance)</option>
                 <option value="Healthcare & Medical">CMO (Marketing)</option>
                 <option value="Legal Services">CTO (Technology)</option>
-                <option value="Other">Other</option>
               </select>
               <select
                 name="referralSource"
