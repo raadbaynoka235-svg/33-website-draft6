@@ -176,27 +176,12 @@ export default function Application() {
                 className="w-full bg-gray-100 text-gray-900 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all appearance-none cursor-pointer"
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: 'right 1.5rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em' }}
               >
-                <option value="">Select Industry</option>
-                <option value="Technology">Technology</option>
-                <option value="Finance & Banking">Finance & Banking</option>
-                <option value="Real Estate & Property">Real Estate & Property</option>
-                <option value="Healthcare & Medical">Healthcare & Medical</option>
-                <option value="Legal Services">Legal Services</option>
-                <option value="Consulting">Consulting</option>
-                <option value="Investment & Private Equity">Investment & Private Equity</option>
-                <option value="Manufacturing">Manufacturing</option>
-                <option value="Retail & E-commerce">Retail & E-commerce</option>
-                <option value="Media & Entertainment">Media & Entertainment</option>
-                <option value="Hospitality & Tourism">Hospitality & Tourism</option>
-                <option value="Construction & Engineering">Construction & Engineering</option>
-                <option value="Education & Training">Education & Training</option>
-                <option value="Energy & Resources">Energy & Resources</option>
-                <option value="Transportation & Logistics">Transportation & Logistics</option>
-                <option value="Pharmaceuticals & Biotechnology">Pharmaceuticals & Biotechnology</option>
-                <option value="Professional Services">Professional Services</option>
-                <option value="Insurance">Insurance</option>
-                <option value="Telecommunications">Telecommunications</option>
-                <option value="Agriculture & Food">Agriculture & Food</option>
+                <option value="">Select Role</option>
+                <option value="Technology">CEO</option>
+                <option value="Finance & Banking">COO</option>
+                <option value="Real Estate & Property">CFO</option>
+                <option value="Healthcare & Medical">CMO</option>
+                <option value="Legal Services">CTO</option>
                 <option value="Other">Other</option>
               </select>
               <select
