@@ -192,16 +192,11 @@ export default function Application() {
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: 'right 1.5rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em' }}
               >
                 <option value="">How Did You Hear About Us?</option>
-                <option value="Social Media">Social Media</option>
-                <option value="Referral">Referral</option>
-                <option value="Word of Mouth">Word of Mouth</option>
-                <option value="Search Engine">Search Engine</option>
-                <option value="Industry Event">Industry Event</option>
-                <option value="Business Associate">Business Associate</option>
-                <option value="LinkedIn">LinkedIn</option>
-                <option value="Press/Media">Press/Media</option>
-                <option value="Existing Member">Existing Member</option>
-                <option value="Other">Other</option>
+                <option value="Social Media">Google</option>
+                <option value="Referral">Facebook</option>
+                <option value="Word of Mouth">Instagram</option>
+                <option value="Search Engine">LinkedIn</option>
+                <option value="Industry Event">Word of Mouth</option>
               </select>
             </div>
           )}
