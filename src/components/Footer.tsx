@@ -21,7 +21,7 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-2 text-sm text-gray-500">
-              <p>members@33club.sydney</p>
+              <p>33@lmsthinking.com</p>
               <p>Sydney, Australia</p>
             </div>
           </div>
