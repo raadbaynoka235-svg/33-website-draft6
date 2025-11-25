@@ -91,14 +91,6 @@ export default function Application() {
   return (
     <section id="application" className="bg-black py-24 px-6">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-serif text-white mb-8">
-            Begin Your Journey
-          </h2>
-          <p className="text-gray-400 font-light leading-relaxed">
-            Membership applications are reviewed carefully. Only those who embody our values
-            and standards will be invited to join.
-          </p>
         </div>
 
         <div className="mb-12">
