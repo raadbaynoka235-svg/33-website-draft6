@@ -104,19 +104,19 @@ export default function Application() {
         <div className="mb-12">
           <div className="flex items-center justify-center gap-8 mb-12">
             <div className="flex flex-col items-center gap-2">
-              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-serif text-lg transition-all ${currentStep >= 1 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
+              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-lora text-lg transition-all ${currentStep >= 1 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
                 1
               </div>
             </div>
             <div className={`flex-1 h-0.5 transition-all ${currentStep >= 2 ? 'bg-white' : 'bg-gray-700'}`}></div>
             <div className="flex flex-col items-center gap-2">
-              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-serif text-lg transition-all ${currentStep >= 2 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
+              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-lora text-lg transition-all ${currentStep >= 2 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
                 2
               </div>
             </div>
             <div className={`flex-1 h-0.5 transition-all ${currentStep >= 3 ? 'bg-white' : 'bg-gray-700'}`}></div>
             <div className="flex flex-col items-center gap-2">
-              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-serif text-lg transition-all ${currentStep >= 3 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
+              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-lora text-lg transition-all ${currentStep >= 3 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
                 3
               </div>
             </div>
