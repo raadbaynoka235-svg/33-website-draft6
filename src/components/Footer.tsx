@@ -27,23 +27,6 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs tracking-[0.3em] uppercase text-gray-600 mb-4">
-              Legal
-            </h4>
-            <div className="space-y-2">
-              <a
-                href="#"
-                className="block text-sm text-gray-500 hover:text-gray-400 transition-colors"
-              >
-                Terms & Conditions
-              </a>
-              <a
-                href="#"
-                className="block text-sm text-gray-500 hover:text-gray-400 transition-colors"
-              >
-                Privacy Policy
-              </a>
-            </div>
           </div>
         </div>
 
