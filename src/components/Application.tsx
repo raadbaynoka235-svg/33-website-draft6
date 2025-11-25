@@ -214,7 +214,7 @@ export default function Application() {
                   name="reason"
                   value={formData.reason}
                   onChange={handleChange}
-                  placeholder="Why do you want to join 33?"
+                  placeholder="Message"
                   required
                   rows={12}
                   className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-3xl px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all resize-none"
