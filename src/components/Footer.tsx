@@ -9,7 +9,7 @@ export default function Footer() {
               alt="33 Logo"
               className="w-12 h-auto opacity-90"
             />
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed"> 
               Private Members Club Sydney
               <br />
               Exclusivity Refined. Opportunity Redefined.
