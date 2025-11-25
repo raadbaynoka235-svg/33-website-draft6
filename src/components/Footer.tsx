@@ -1,40 +1,30 @@
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-gray-900 py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          <div>
-            <img
-              src="/Final Logo.png"
-              alt="33 Logo"
-              className="w-12 h-auto opacity-90"
-            />
-            <p className="text-sm text-gray-600 leading-relaxed"> 
-              Private Members Club Sydney
-              <br />
-              Exclusivity Refined. Opportunity Redefined.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-xs tracking-[0.3em] uppercase text-gray-600 mb-4">
-              Contact
-            </h4>
-            <div className="space-y-2 text-sm text-gray-500">
-              <p>33@lmsthinking.com</p>
-              <p>Sydney, Australia</p>
-            </div>
-          </div>
-
-          <div>
-          </div>
+    <footer className="bg-black text-gray-400 py-12">
+      <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+    
+        {/* LEFT SECTION */}
+        <div>
+          <img src="/Final Logo.png" alt="33 Logo" className="w-16 mb-4" />
+    
+          <p className="text-sm">Private Members Club Sydney</p>
+          <p className="text-sm">Exclusivity Refined. Opportunity Redefined.</p>
         </div>
-
-        <div className="pt-8 border-t border-gray-900 text-center">
-          <p className="text-xs tracking-wider text-gray-700">
-            © {new Date().getFullYear()} 33 — Private Members Club. All rights reserved.
-          </p>
+    
+        {/* RIGHT SECTION */}
+        <div>
+          <h4 className="text-xs tracking-[0.3em] uppercase text-gray-500 mb-4">Contact</h4>
+          <p className="text-sm">33@lmsthinking.com</p>
+          <p className="text-sm">Sydney, Australia</p>
         </div>
+    
+      </div>
+    
+      {/* COPYRIGHT SECTION */}
+      <div className="border-t border-gray-900 mt-12 pt-6">
+        <p className="text-xs text-center tracking-wider text-gray-600">
+          © {new Date().getFullYear()} 33 — Private Members Club. All rights reserved.
+        </p>
       </div>
     </footer>
   );
