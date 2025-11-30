@@ -1,6 +1,9 @@
+import { ScrollReveal } from './ScrollReveal';
+
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-12">
+    <ScrollReveal>
+      <footer className="bg-black text-gray-400 py-12">
       <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
     
         {/* LEFT SECTION */}
@@ -18,6 +21,7 @@ export default function Footer() {
       </div>
     
       {/* COPYRIGHT SECTION */}
-    </footer>
+      </footer>
+    </ScrollReveal>
   );
 }
