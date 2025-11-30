@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { supabase } from '../lib/supabase';
-import { ScrollReveal } from './ScrollReveal';
+import { supabase } from '../lib/supabase'; 
 
 export default function Application() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -90,9 +89,8 @@ export default function Application() {
   };
 
   return (
-    <ScrollReveal>
-      <section id="application" className="bg-black py-24 px-6">
-        <div className="max-w-2xl mx-auto">
+    <section id="application" className="bg-black py-24 px-6">
+      <div className="max-w-2xl mx-auto">
         
 
         <div className="mb-12">
@@ -263,8 +261,8 @@ export default function Application() {
 
    
         </form>
-        </div>
-      </section>
-    </ScrollReveal>
+      </div>
+    </section>
   );
 }
+ 

@@ -21,3 +21,9 @@ body {
 .scroll-reveal {
   will-change: opacity, transform;
 }
+
+@layer components {
+  .page-container {
+    @apply max-w-3xl w-full mx-auto px-4;
+  }
+}
