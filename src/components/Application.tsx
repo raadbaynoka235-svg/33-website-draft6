@@ -125,7 +125,7 @@ export default function Application() {
                 onChange={handleChange}
                 placeholder="First Name"
                 required
-                className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-4g px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
+                className="w-full bg-gray-100 text-gray-900 placeholder-gray-600 rounded-40g px-6 py-4 text-base focus:outline-none focus:ring-2 focus:ring-gray-300 transition-all"
               />
               <input
                 type="text"
