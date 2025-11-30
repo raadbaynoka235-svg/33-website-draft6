@@ -96,7 +96,7 @@ export default function Application() {
         <div className="mb-12">
           <div className="flex items-center justify-center gap-8 mb-12">
             <div className="flex flex-col items-center gap-2">
-              <div className={`w-12 h-12 rounded-1g border-2 flex items-center justify-center font-lora text-lg transition-all ${currentStep >= 1 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
+              <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-lora text-lg transition-all ${currentStep >= 1 ? 'bg-white text-black border-white' : 'border-gray-600 text-gray-600'}`}>
                 1
               </div>
             </div>
